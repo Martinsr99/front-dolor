@@ -1,0 +1,16 @@
+<div class="result-section p-4 bg-white rounded shadow-md max-w-4xl mx-auto mt-8">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Resultados de la Conversión</h2>
+    <div *ngIf="results.length > 0; else noResults">
+      <div class="grid grid-cols-3 gap-4">
+        <div *ngFor="let image of results" class="relative rounded shadow">
+          <img [src]="image" class="rounded" alt="Converted image">
+          <button (click)="downloadImage(image)" class="absolute bottom-2 right-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
+            Descargar
+          </button>
+        </div>
+      </div>
+    </div>
+    <ng-template #noResults>
+      <p class="text-center text-gray-500">No hay resultados para mostrar.</p>
+    </ng-template>
+</div>

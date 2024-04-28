@@ -1,0 +1,12 @@
+.result-section {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); // 3 columnas de igual tamaño
+  
+      img {
+        width: 100%; // Asegura que las imágenes se escalen correctamente
+        height: auto;
+        border-radius: 0.375rem; // Bordes redondeados
+      }
+    }
+  }
+  
