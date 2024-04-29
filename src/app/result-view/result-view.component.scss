@@ -1,18 +1,22 @@
-$result-blue-500: #3b82f6;
-$result-blue-700: darken($result-blue-500, 10%);
+$blue-500: #3b82f6;
+$blue-700: darken($blue-500, 10%);
+$gray-800: #2d3748;
+$gray-500: #718096;
+$background-color: #f3f4f6; // Usando el mismo gris para el fondo
+$shadow-color: rgba(0, 0, 0, 0.1);
 
-.result-section {
-  background: #ffffff;
+.section {
+  background: $background-color;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px $shadow-color;
   padding: 1rem;
-  max-width: 1024px;  // ajustado para más espacio si necesario
+  max-width: 1024px;
   margin: 2rem auto;
 
   h2 {
-    color: #2d3748; // A darker shade for better visibility
+    color: $gray-800;
     margin-bottom: 1rem;
-    font-size: 1.25rem; // 20px
+    font-size: 1.25rem;
     font-weight: bold;
   }
 
@@ -43,7 +47,7 @@ $result-blue-700: darken($result-blue-500, 10%);
       position: absolute;
       bottom: 12px;
       right: 12px;
-      background-color: $result-blue-500;
+      background-color: $blue-500;
       color: white;
       padding: 0.25rem 0.5rem;
       border-radius: 0.375rem;
@@ -52,15 +56,15 @@ $result-blue-700: darken($result-blue-500, 10%);
       transition: background-color 0.3s, box-shadow 0.3s;
 
       &:hover {
-        background-color: $result-blue-700;
-        box-shadow: 0 5px 15px rgba($result-blue-500, 0.3);
+        background-color: $blue-700;
+        box-shadow: 0 5px 15px rgba($blue-500, 0.3);
       }
     }
   }
-}
 
-.ng-template {
-  text-align: center;
-  color: #718096; // Slightly muted text color
-  font-size: 1rem;
+  .ng-template {
+    text-align: center;
+    color: $gray-500;
+    font-size: 1rem;
+  }
 }
